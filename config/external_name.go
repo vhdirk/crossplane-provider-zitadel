@@ -9,9 +9,11 @@ import "github.com/crossplane/upjet/pkg/config"
 // ExternalNameConfigs contains all external name configurations for this
 // provider.
 var ExternalNameConfigs = map[string]config.ExternalName{
-	"zitadel_org":        config.IdentifierFromProvider,
-	"zitadel_action":     config.IdentifierFromProvider,
-	"zitadel_human_user": config.IdentifierFromProvider,
+	"zitadel_org":          config.IdentifierFromProvider,
+	"zitadel_action":       config.IdentifierFromProvider,
+	"zitadel_human_user":   config.IdentifierFromProvider,
+	"zitadel_machine_user": config.IdentifierFromProvider,
+	"zitadel_domain":       config.IdentifierFromProvider,
 }
 
 // ExternalNameConfigurations applies all external name configs listed in the

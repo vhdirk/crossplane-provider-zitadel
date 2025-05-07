@@ -43,5 +43,16 @@ func Configure(p *config.Provider) {
 
 		r.References["org_id"] = OrganisationRef
 	})
+	p.AddResourceConfigurator("zitadel_machine_user", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "MachineUser"
 
+		r.References["org_id"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_domain", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "Domain"
+
+		r.References["org_id"] = OrganisationRef
+	})
 }

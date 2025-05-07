@@ -10,7 +10,13 @@ package v1alpha1
 func (tr *Action) Hub() {}
 
 // Hub marks this type as a conversion hub.
+func (tr *Domain) Hub() {}
+
+// Hub marks this type as a conversion hub.
 func (tr *HumanUser) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *MachineUser) Hub() {}
 
 // Hub marks this type as a conversion hub.
 func (tr *Organisation) Hub() {}
