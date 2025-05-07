@@ -2,7 +2,7 @@ module github.com/vhdirk/crossplane-provider-zitadel
 
 go 1.23.0
 
-toolchain go1.23.4
+toolchain go1.24.3
 
 require (
 	dario.cat/mergo v1.0.1
