@@ -36,4 +36,12 @@ func Configure(p *config.Provider) {
 
 		r.References["org_id"] = OrganisationRef
 	})
+
+	p.AddResourceConfigurator("zitadel_human_user", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "HumanUser"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
 }
