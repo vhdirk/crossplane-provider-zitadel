@@ -14,27 +14,27 @@
   "semanticCommits": "disabled",
 // All PRs should have a label
   "labels": ["automated"],
-  "regexManagers": [
-    {
-// We want a PR to bump Go versions used through env variables in any Github
-// Actions, taking it from the official Github repository.
-      "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.ya?ml$"],
-      "matchStrings": [
-        "GO_VERSION: '(?<currentValue>.*?)'\\n"
-      ],
-      "datasourceZitadel": "golang-version",
-      "depNameZitadel": "golang"
-    }, {
-// We want a PR to bump golangci-lint versions used through env variables in
-// any Github Actions, taking it from the official Github repository tags.
-      "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.ya?ml$"],
-      "matchStrings": [
-        "GOLANGCI_VERSION: '(?<currentValue>.*?)'\\n"
-      ],
-      "datasourceZitadel": "github-tags",
-      "depNameZitadel": "golangci/golangci-lint"
-    }
-  ],
+//   "regexManagers": [
+//     {
+// // We want a PR to bump Go versions used through env variables in any Github
+// // Actions, taking it from the official Github repository.
+//       "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.ya?ml$"],
+//       "matchStrings": [
+//         "GO_VERSION: '(?<currentValue>.*?)'\\n"
+//       ],
+//       "datasourceZitadel": "golang-version",
+//       "depNameZitadel": "golang"
+//     }, {
+// // We want a PR to bump golangci-lint versions used through env variables in
+// // any Github Actions, taking it from the official Github repository tags.
+//       "fileMatch": ["^\\.github\\/workflows\\/[^/]+\\.ya?ml$"],
+//       "matchStrings": [
+//         "GOLANGCI_VERSION: '(?<currentValue>.*?)'\\n"
+//       ],
+//       "datasourceZitadel": "github-tags",
+//       "depNameZitadel": "golangci/golangci-lint"
+//     }
+//   ],
 // PackageRules disabled below should be enabled in case of vulnerabilities
   "vulnerabilityAlerts": {
     "enabled": true
