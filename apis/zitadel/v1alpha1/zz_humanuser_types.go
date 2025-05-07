@@ -54,7 +54,7 @@ type HumanUserInitParameters struct {
 	// (String) ID of the organization
 	// ID of the organization
 	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organisation
-	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id",true)
+	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)
 	OrgID *string `json:"orgId,omitempty" tf:"org_id,omitempty"`
 
 	// Reference to a Organisation in zitadel to populate orgId.
@@ -194,7 +194,7 @@ type HumanUserParameters struct {
 	// (String) ID of the organization
 	// ID of the organization
 	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organisation
-	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id",true)
+	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)
 	// +kubebuilder:validation:Optional
 	OrgID *string `json:"orgId,omitempty" tf:"org_id,omitempty"`
 

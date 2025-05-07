@@ -17,11 +17,38 @@ func ExtractParamPath(sourceAttr string, isObservation bool) xpref.ExtractValueF
 	}
 }
 
-// UserRef references a user by id
-var OrganisationRef = config.Reference{
-	TerraformName: "zitadel_org",
-	Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id",true)`,
-}
+// Reference definitions for resources
+var (
+	// OrganisationRef references an organization by id
+	OrganisationRef = config.Reference{
+		TerraformName: "zitadel_org",
+		Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)`,
+	}
+
+	// ProjectRef references a project by id
+	ProjectRef = config.Reference{
+		TerraformName: "zitadel_project",
+		Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)`,
+	}
+
+	// ApplicationRef references an application by id
+	ApplicationRef = config.Reference{
+		TerraformName: "zitadel_application",
+		Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)`,
+	}
+
+	// UserRef references a user by id
+	UserRef = config.Reference{
+		TerraformName: "zitadel_human_user",
+		Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)`,
+	}
+
+	// DomainRef references a domain by id
+	DomainRef = config.Reference{
+		TerraformName: "zitadel_domain",
+		Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)`,
+	}
+)
 
 // Configure configures the base provider.
 func Configure(p *config.Provider) {
