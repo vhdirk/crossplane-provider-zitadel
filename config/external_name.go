@@ -14,6 +14,7 @@ var ExternalNameConfigs = map[string]config.ExternalName{
 	"zitadel_human_user":   config.IdentifierFromProvider,
 	"zitadel_machine_user": config.IdentifierFromProvider,
 	"zitadel_domain":       config.IdentifierFromProvider,
+	"zitadel_project":      config.IdentifierFromProvider,
 }
 
 // ExternalNameConfigurations applies all external name configs listed in the
