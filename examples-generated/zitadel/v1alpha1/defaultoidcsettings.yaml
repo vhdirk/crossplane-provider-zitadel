@@ -1,0 +1,14 @@
+apiVersion: zitadel.crossplane.io/v1alpha1
+kind: DefaultOidcSettings
+metadata:
+  annotations:
+    meta.upbound.io/example-id: zitadel/v1alpha1/defaultoidcsettings
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+spec:
+  forProvider:
+    accessTokenLifetime: 12h0m0s
+    idTokenLifetime: 12h0m0s
+    refreshTokenExpiration: 720h0m0s
+    refreshTokenIdleExpiration: 2160h0m0s

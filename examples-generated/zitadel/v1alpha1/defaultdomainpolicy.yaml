@@ -1,0 +1,13 @@
+apiVersion: zitadel.crossplane.io/v1alpha1
+kind: DefaultDomainPolicy
+metadata:
+  annotations:
+    meta.upbound.io/example-id: zitadel/v1alpha1/defaultdomainpolicy
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+spec:
+  forProvider:
+    smtpSenderAddressMatchesInstanceDomain: true
+    userLoginMustBeDomain: false
+    validateOrgDomains: true

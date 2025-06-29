@@ -1,0 +1,15 @@
+apiVersion: zitadel.crossplane.io/v1alpha1
+kind: RifySmsOtpMessageText
+metadata:
+  annotations:
+    meta.upbound.io/example-id: zitadel/v1alpha1/rifysmsotpmessagetext
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+spec:
+  forProvider:
+    language: en
+    orgIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: zitadel_org
+    text: text example

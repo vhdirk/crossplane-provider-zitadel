@@ -60,6 +60,18 @@ var (
 		TerraformName: "zitadel_human_user",
 		Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)`,
 	}
+
+	// MachineUserRef references a machine user by id
+	MachineUserRef = config.Reference{
+		TerraformName: "zitadel_machine_user",
+		Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)`,
+	}
+
+	// ApplicationApiRef references a api application by id
+	ApplicationApiRef = config.Reference{
+		TerraformName: "zitadel_application_api",
+		Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)`,
+	}
 )
 
 // Configure configures the base provider.
@@ -68,6 +80,391 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("zitadel_org", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "Organisation"
+	})
+
+	p.AddResourceConfigurator("zitadel_action", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "Action"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_application_api", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "ApplicationApi"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["project_id"] = ProjectRef
+	})
+
+	p.AddResourceConfigurator("zitadel_application_key", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "ApplicationKey"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["project_id"] = ProjectRef
+		r.References["app_id"] = ApplicationApiRef
+	})
+
+	p.AddResourceConfigurator("zitadel_application_oidc", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "ApplicationOidc"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["project_id"] = ProjectRef
+	})
+
+	p.AddResourceConfigurator("zitadel_application_saml", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "ApplicationSaml"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["project_id"] = ProjectRef
+	})
+
+	p.AddResourceConfigurator("zitadel_default_domain_claimed_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultDomainClaimedMessageText"
+	})
+
+	p.AddResourceConfigurator("zitadel_default_domain_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultDomainPolicy"
+	})
+
+	p.AddResourceConfigurator("zitadel_default_init_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultInitMessageText"
+	})
+
+	p.AddResourceConfigurator("zitadel_default_label_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultLabelPolicy"
+	})
+
+	p.AddResourceConfigurator("zitadel_default_lockout_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultLockoutPolicy"
+	})
+
+	p.AddResourceConfigurator("zitadel_default_login_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultLoginPolicy"
+	})
+
+	// p.AddResourceConfigurator("zitadel_default_login_texts", func(r *config.Resource) {
+	// 	r.ShortGroup = shortGroup
+	// 	r.Kind = "DefaultLoginTexts"
+	// })
+
+	p.AddResourceConfigurator("zitadel_default_notification_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultNotificationPolicy"
+	})
+	p.AddResourceConfigurator("zitadel_default_oidc_settings", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultOidcSettings"
+	})
+	p.AddResourceConfigurator("zitadel_default_password_age_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultPasswordAgePolicy"
+	})
+	p.AddResourceConfigurator("zitadel_default_password_change_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultPasswordChangeMessageText"
+	})
+	p.AddResourceConfigurator("zitadel_default_password_complexity_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultPasswordComplexityPolicy"
+	})
+	p.AddResourceConfigurator("zitadel_default_password_reset_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultPasswordResetMessageText"
+	})
+	p.AddResourceConfigurator("zitadel_default_passwordless_registration_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultPasswordlessRegistrationMessageText"
+	})
+	p.AddResourceConfigurator("zitadel_default_privacy_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultPrivacyPolicy"
+	})
+	p.AddResourceConfigurator("zitadel_default_verify_email_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultVerifyEmailMessageText"
+	})
+	p.AddResourceConfigurator("zitadel_default_verify_email_otp_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultVerifyEmailOtpMessageText"
+	})
+	p.AddResourceConfigurator("zitadel_default_verify_phone_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultVerifyPhoneMessageText"
+	})
+	p.AddResourceConfigurator("zitadel_default_verify_sms_otp_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DefaultVerifySmsOtpMessageText"
+	})
+
+	p.AddResourceConfigurator("zitadel_domain", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "Domain"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_domain_claimed_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DomainClaimedMessageText"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_domain_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "DomainPoliy"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_human_user", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "HumanUser"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_idp_azure_ad", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpAzureAd"
+	})
+	p.AddResourceConfigurator("zitadel_idp_github", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpGithub"
+	})
+	p.AddResourceConfigurator("zitadel_idp_github_es", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpGithubEs"
+	})
+	p.AddResourceConfigurator("zitadel_idp_gitlab", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpGitlab"
+	})
+	p.AddResourceConfigurator("zitadel_idp_gitlab_self_hosted", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpGitlabSelfHosted"
+	})
+	p.AddResourceConfigurator("zitadel_idp_google", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpGoogle"
+	})
+	p.AddResourceConfigurator("zitadel_idp_ldap", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpLdap"
+	})
+	p.AddResourceConfigurator("zitadel_idp_oauth", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpOauth"
+	})
+	p.AddResourceConfigurator("zitadel_idp_oidc", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpOidc"
+	})
+	p.AddResourceConfigurator("zitadel_idp_saml", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "IdpSaml"
+	})
+
+	p.AddResourceConfigurator("zitadel_init_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "InitMessageText"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_instance_member", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "InstanceMember"
+
+		r.References["user_id"] = HumanUserRef
+	})
+
+	p.AddResourceConfigurator("zitadel_label_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "LabelPolicy"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_lockout_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "LockoutPolicy"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_login_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "LoginPolicy"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	// p.AddResourceConfigurator("zitadel_login_texts", func(r *config.Resource) {
+	// 	r.ShortGroup = shortGroup
+	// 	r.Kind = "LoginTexts"
+
+	// 	r.References["org_id"] = OrganisationRef
+	// })
+
+	p.AddResourceConfigurator("zitadel_machine_key", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "MachineKey"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["user_id"] = MachineUserRef
+	})
+
+	p.AddResourceConfigurator("zitadel_machine_user", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "MachineUser"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_notification_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "NotificationPolicy"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_org_idp_azure_ad", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpAzureAd"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_github", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpGithub"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_github_es", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpGithubEs"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_gitlab", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpGitlab"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_gitlab_self_hosted", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpGitlabSelfHosted"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_google", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpGoogle"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_jwt", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpJwt"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_ldap", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpLdap"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_oauth", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpOauth"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_oidc", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpOidc"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_org_idp_saml", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationIdpSaml"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_org_member", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationMember"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["user_id"] = HumanUserRef
+	})
+
+	p.AddResourceConfigurator("zitadel_org_metadata", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "OrganisationMetadata"
+
+		r.References["org_ird"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_password_age_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "PasswordAgePolicy"
+
+		r.References["org_id"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_password_change_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "PasswordChangeMessageText"
+
+		r.References["org_id"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_password_complexity_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "PasswordComplexityPolicy"
+
+		r.References["org_id"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_password_reset_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "PasswordResetMessageText"
+
+		r.References["org_id"] = OrganisationRef
+	})
+	p.AddResourceConfigurator("zitadel_passwordless_registration_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "PasswordlessRegistrationMessageText"
+
+		r.References["org_id"] = OrganisationRef
+	})
+
+	p.AddResourceConfigurator("zitadel_personal_access_token", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "PersonalAccessToken"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["user_id"] = MachineUserRef
+	})
+
+	p.AddResourceConfigurator("zitadel_privacy_policy", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "PrivacyPolicy"
+
+		r.References["org_id"] = OrganisationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_project", func(r *config.Resource) {
@@ -88,119 +485,90 @@ func Configure(p *config.Provider) {
 
 	p.AddResourceConfigurator("zitadel_project_grant_member", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "ProjectGrant"
+		r.Kind = "ProjectGrantMember"
 
 		r.References["org_id"] = OrganisationRef
-		r.References["granted_org_id"] = OrganisationRef
+		r.References["project_id"] = ProjectRef
+		r.References["user_id"] = HumanUserRef
+	})
+
+	p.AddResourceConfigurator("zitadel_project_member", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "ProjectMember"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["project_id"] = ProjectRef
+		r.References["user_id"] = HumanUserRef
+	})
+
+	p.AddResourceConfigurator("zitadel_project_role", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "ProjectRole"
+
+		r.References["org_id"] = OrganisationRef
 		r.References["project_id"] = ProjectRef
 	})
 
-	p.AddResourceConfigurator("zitadel_action", func(r *config.Resource) {
+	p.AddResourceConfigurator("zitadel_sms_provider_http", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "Action"
+		r.Kind = "SmsProviderHttp"
+	})
+	p.AddResourceConfigurator("zitadel_sms_provider_twilio", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "SmsProviderTwilio"
+	})
+	p.AddResourceConfigurator("zitadel_smtp_config", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "SmtpConfig"
+	})
+
+	p.AddResourceConfigurator("zitadel_trigger_actions", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "TriggerActions"
 
 		r.References["org_id"] = OrganisationRef
 	})
 
-	// zitadel_application_api
-	// zitadel_application_key
-	// zitadel_application_oidc
-	// zitadel_application_saml
-	// zitadel_default_domain_claimed_message_text
-	// zitadel_default_domain_policy
-	// zitadel_default_init_message_text
-	// zitadel_default_label_policy
-	// zitadel_default_lockout_policy
-	// zitadel_default_login_policy
-	// zitadel_default_login_texts
-	// zitadel_default_notification_policy
-	// zitadel_default_oidc_settings
-	// zitadel_default_password_age_policy
-	// zitadel_default_password_change_message_text
-	// zitadel_default_password_complexity_policy
-	// zitadel_default_password_reset_message_text
-	// zitadel_default_passwordless_registration_message_text
-	// zitadel_default_privacy_policy
-	// zitadel_default_verify_email_message_text
-	// zitadel_default_verify_email_otp_message_text
-	// zitadel_default_verify_phone_message_text
-	// zitadel_default_verify_sms_otp_message_text
-
-	p.AddResourceConfigurator("zitadel_domain", func(r *config.Resource) {
+	p.AddResourceConfigurator("zitadel_user_grant", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "Domain"
+		r.Kind = "UserGrant"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["user_id"] = HumanUserRef
+		r.References["project_id"] = ProjectRef
+	})
+
+	p.AddResourceConfigurator("zitadel_user_metadata", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "UserMetadata"
+
+		r.References["org_id"] = OrganisationRef
+		r.References["user_id"] = HumanUserRef
+	})
+
+	p.AddResourceConfigurator("zitadel_verify_email_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "VerifyEmailMessageText"
 
 		r.References["org_id"] = OrganisationRef
 	})
-
-	// zitadel_domain_claimed_message_text
-	// zitadel_domain_policy
-	p.AddResourceConfigurator("zitadel_human_user", func(r *config.Resource) {
+	p.AddResourceConfigurator("zitadel_verify_email_otp_message_text", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "HumanUser"
+		r.Kind = "FyEmailOtpMessageText"
 
 		r.References["org_id"] = OrganisationRef
 	})
-	// zitadel_idp_azure_ad
-	// zitadel_idp_github
-	// zitadel_idp_github_es
-	// zitadel_idp_gitlab
-	// zitadel_idp_gitlab_self_hosted
-	// zitadel_idp_google
-	// zitadel_idp_ldap
-	// zitadel_idp_oauth
-	// zitadel_idp_oidc
-	// zitadel_idp_saml
-	// zitadel_init_message_text
-	// zitadel_instance_member
-	// zitadel_label_policy
-	// zitadel_lockout_policy
-	// zitadel_login_policy
-	// zitadel_login_texts
-	// zitadel_machine_key
-
-	p.AddResourceConfigurator("zitadel_machine_user", func(r *config.Resource) {
+	p.AddResourceConfigurator("zitadel_verify_phone_message_text", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "MachineUser"
+		r.Kind = "VerifyPhoneMessageText"
 
 		r.References["org_id"] = OrganisationRef
 	})
+	p.AddResourceConfigurator("zitadel_verify_sms_otp_message_text", func(r *config.Resource) {
+		r.ShortGroup = shortGroup
+		r.Kind = "RifySmsOtpMessageText"
 
-	// zitadel_notification_policy
-
-	// zitadel_org_idp_azure_ad
-	// zitadel_org_idp_github
-	// zitadel_org_idp_github_es
-	// zitadel_org_idp_gitlab
-	// zitadel_org_idp_gitlab_self_hosted
-	// zitadel_org_idp_google
-	// zitadel_org_idp_jwt
-	// zitadel_org_idp_ldap
-	// zitadel_org_idp_oauth
-	// zitadel_org_idp_oidc
-	// zitadel_org_idp_saml
-	// zitadel_org_member
-	// zitadel_org_metadata
-	// zitadel_password_age_policy
-	// zitadel_password_change_message_text
-	// zitadel_password_complexity_policy
-	// zitadel_password_reset_message_text
-	// zitadel_passwordless_registration_message_text
-	// zitadel_personal_access_token
-	// zitadel_privacy_policy
-
-	// zitadel_project_grant_member
-	// zitadel_project_member
-	// zitadel_project_role
-	// zitadel_sms_provider_http
-	// zitadel_sms_provider_twilio
-	// zitadel_smtp_config
-	// zitadel_trigger_actions
-	// zitadel_user_grant
-	// zitadel_user_metadata
-	// zitadel_verify_email_message_text
-	// zitadel_verify_email_otp_message_text
-	// zitadel_verify_phone_message_text
-	// zitadel_verify_sms_otp_message_text
+		r.References["org_id"] = OrganisationRef
+	})
 
 }

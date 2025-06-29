@@ -10,13 +10,232 @@ package v1alpha1
 func (tr *Action) Hub() {}
 
 // Hub marks this type as a conversion hub.
+func (tr *ApplicationApi) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *ApplicationKey) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *ApplicationOidc) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *ApplicationSaml) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultDomainClaimedMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultDomainPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultInitMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultLabelPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultLockoutPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultLoginPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultNotificationPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultOidcSettings) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultPasswordChangeMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultPasswordComplexityPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultPasswordlessRegistrationMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultPasswordResetMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultPrivacyPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultVerifyEmailMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultVerifyEmailOtpMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultVerifyPhoneMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DefaultVerifySmsOtpMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
 func (tr *Domain) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DomainClaimedMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DomainPoliy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *FyEmailOtpMessageText) Hub() {}
 
 // Hub marks this type as a conversion hub.
 func (tr *HumanUser) Hub() {}
 
 // Hub marks this type as a conversion hub.
+func (tr *IdpAzureAd) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *IdpGithub) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *IdpGithubEs) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *IdpGitlab) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *IdpGitlabSelfHosted) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *IdpGoogle) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *IdpLdap) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *IdpOauth) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *IdpOidc) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *IdpSaml) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *InitMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *InstanceMember) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *LabelPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *LockoutPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *LoginPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *MachineKey) Hub() {}
+
+// Hub marks this type as a conversion hub.
 func (tr *MachineUser) Hub() {}
 
 // Hub marks this type as a conversion hub.
+func (tr *NotificationPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
 func (tr *Organisation) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpAzureAd) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpGithub) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpGithubEs) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpGitlab) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpGitlabSelfHosted) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpGoogle) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpJwt) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpLdap) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpOauth) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpOidc) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationIdpSaml) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationMember) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *OrganisationMetadata) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *PasswordChangeMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *PasswordComplexityPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *PasswordlessRegistrationMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *PasswordResetMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *PersonalAccessToken) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *PrivacyPolicy) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *Project) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *ProjectGrant) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *ProjectGrantMember) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *ProjectMember) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *ProjectRole) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *RifySmsOtpMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *SmsProviderTwilio) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *SmtpConfig) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *TriggerActions) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *UserGrant) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *UserMetadata) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *VerifyEmailMessageText) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *VerifyPhoneMessageText) Hub() {}

@@ -1,0 +1,14 @@
+apiVersion: zitadel.crossplane.io/v1alpha1
+kind: LockoutPolicy
+metadata:
+  annotations:
+    meta.upbound.io/example-id: zitadel/v1alpha1/lockoutpolicy
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+spec:
+  forProvider:
+    maxPasswordAttempts: "5"
+    orgIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: zitadel_org

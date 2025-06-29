@@ -1,0 +1,21 @@
+apiVersion: zitadel.crossplane.io/v1alpha1
+kind: ApplicationKey
+metadata:
+  annotations:
+    meta.upbound.io/example-id: zitadel/v1alpha1/applicationkey
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+spec:
+  forProvider:
+    appIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: zitadel_application_api
+    expirationDate: "2519-04-01T08:45:00Z"
+    keyType: KEY_TYPE_JSON
+    orgIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: zitadel_org
+    projectIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: zitadel_project

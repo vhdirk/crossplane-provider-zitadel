@@ -1,0 +1,18 @@
+apiVersion: zitadel.crossplane.io/v1alpha1
+kind: UserMetadata
+metadata:
+  annotations:
+    meta.upbound.io/example-id: zitadel/v1alpha1/usermetadata
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+spec:
+  forProvider:
+    key: a_key
+    orgIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: zitadel_org
+    userIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: zitadel_human_user
+    value: a_value

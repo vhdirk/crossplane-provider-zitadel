@@ -1,0 +1,16 @@
+apiVersion: zitadel.crossplane.io/v1alpha1
+kind: DomainPoliy
+metadata:
+  annotations:
+    meta.upbound.io/example-id: zitadel/v1alpha1/domainpoliy
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+spec:
+  forProvider:
+    orgIdSelector:
+      matchLabels:
+        testing.upbound.io/example-name: zitadel_org
+    smtpSenderAddressMatchesInstanceDomain: true
+    userLoginMustBeDomain: false
+    validateOrgDomains: true

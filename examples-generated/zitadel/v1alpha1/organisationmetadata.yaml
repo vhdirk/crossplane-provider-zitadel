@@ -1,0 +1,13 @@
+apiVersion: zitadel.crossplane.io/v1alpha1
+kind: OrganisationMetadata
+metadata:
+  annotations:
+    meta.upbound.io/example-id: zitadel/v1alpha1/organisationmetadata
+  labels:
+    testing.upbound.io/example-name: default
+  name: default
+spec:
+  forProvider:
+    key: a_key
+    orgId: ${data.zitadel_org.default.id}
+    value: a_value
