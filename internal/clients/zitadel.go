@@ -30,11 +30,16 @@ const (
 )
 
 var requiredZitadelConfigKeys = []string{
-	"url",
-	"token",
-	"insecure",
+	"domain",
 }
-var optionalZitadelConfigKeys = []string{}
+var optionalZitadelConfigKeys = []string{
+	"insecure",
+	"jwt_file",
+	"jwt_profile_file",
+	"jwt_profile_json",
+	"port",
+	"token",
+}
 
 // TerraformSetupBuilder builds Terraform a terraform.SetupFn function which
 // returns Terraform provider setup configuration
