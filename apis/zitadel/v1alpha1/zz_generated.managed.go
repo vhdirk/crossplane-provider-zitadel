@@ -2707,843 +2707,843 @@ func (mg *NotificationPolicy) SetWriteConnectionSecretToReference(r *xpv1.Secret
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this Organisation.
-func (mg *Organisation) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this Organization.
+func (mg *Organization) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this Organisation.
-func (mg *Organisation) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this Organization.
+func (mg *Organization) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this Organisation.
-func (mg *Organisation) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this Organization.
+func (mg *Organization) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this Organisation.
-func (mg *Organisation) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this Organization.
+func (mg *Organization) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this Organisation.
-func (mg *Organisation) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this Organization.
+func (mg *Organization) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this Organisation.
-func (mg *Organisation) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this Organization.
+func (mg *Organization) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this Organisation.
-func (mg *Organisation) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this Organization.
+func (mg *Organization) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this Organisation.
-func (mg *Organisation) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this Organization.
+func (mg *Organization) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this Organisation.
-func (mg *Organisation) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this Organization.
+func (mg *Organization) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this Organisation.
-func (mg *Organisation) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this Organization.
+func (mg *Organization) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this Organisation.
-func (mg *Organisation) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this Organization.
+func (mg *Organization) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this Organisation.
-func (mg *Organisation) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this Organization.
+func (mg *Organization) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpAzureAd.
-func (mg *OrganisationIdpAzureAd) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpAzureAd.
+func (mg *OrganizationIdpAzureAd) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpGithub.
-func (mg *OrganisationIdpGithub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpGithub.
+func (mg *OrganizationIdpGithub) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpGithubEs.
-func (mg *OrganisationIdpGithubEs) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpGithubEs.
+func (mg *OrganizationIdpGithubEs) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpGitlab.
-func (mg *OrganisationIdpGitlab) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpGitlab.
+func (mg *OrganizationIdpGitlab) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpGitlabSelfHosted.
-func (mg *OrganisationIdpGitlabSelfHosted) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpGitlabSelfHosted.
+func (mg *OrganizationIdpGitlabSelfHosted) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpGoogle.
-func (mg *OrganisationIdpGoogle) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpGoogle.
+func (mg *OrganizationIdpGoogle) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpJwt.
-func (mg *OrganisationIdpJwt) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpJwt.
+func (mg *OrganizationIdpJwt) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpLdap.
-func (mg *OrganisationIdpLdap) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpLdap.
+func (mg *OrganizationIdpLdap) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpOauth.
-func (mg *OrganisationIdpOauth) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpOauth.
+func (mg *OrganizationIdpOauth) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpOidc.
-func (mg *OrganisationIdpOidc) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpOidc.
+func (mg *OrganizationIdpOidc) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationIdpSaml.
-func (mg *OrganisationIdpSaml) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationIdpSaml.
+func (mg *OrganizationIdpSaml) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationMember.
-func (mg *OrganisationMember) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationMember.
+func (mg *OrganizationMember) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationMember.
-func (mg *OrganisationMember) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationMember.
+func (mg *OrganizationMember) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationMember.
-func (mg *OrganisationMember) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationMember.
+func (mg *OrganizationMember) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationMember.
-func (mg *OrganisationMember) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationMember.
+func (mg *OrganizationMember) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationMember.
-func (mg *OrganisationMember) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationMember.
+func (mg *OrganizationMember) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationMember.
-func (mg *OrganisationMember) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationMember.
+func (mg *OrganizationMember) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationMember.
-func (mg *OrganisationMember) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationMember.
+func (mg *OrganizationMember) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationMember.
-func (mg *OrganisationMember) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationMember.
+func (mg *OrganizationMember) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationMember.
-func (mg *OrganisationMember) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationMember.
+func (mg *OrganizationMember) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationMember.
-func (mg *OrganisationMember) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationMember.
+func (mg *OrganizationMember) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationMember.
-func (mg *OrganisationMember) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationMember.
+func (mg *OrganizationMember) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationMember.
-func (mg *OrganisationMember) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationMember.
+func (mg *OrganizationMember) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 
-// GetCondition of this OrganisationMetadata.
-func (mg *OrganisationMetadata) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
+// GetCondition of this OrganizationMetadata.
+func (mg *OrganizationMetadata) GetCondition(ct xpv1.ConditionType) xpv1.Condition {
 	return mg.Status.GetCondition(ct)
 }
 
-// GetDeletionPolicy of this OrganisationMetadata.
-func (mg *OrganisationMetadata) GetDeletionPolicy() xpv1.DeletionPolicy {
+// GetDeletionPolicy of this OrganizationMetadata.
+func (mg *OrganizationMetadata) GetDeletionPolicy() xpv1.DeletionPolicy {
 	return mg.Spec.DeletionPolicy
 }
 
-// GetManagementPolicies of this OrganisationMetadata.
-func (mg *OrganisationMetadata) GetManagementPolicies() xpv1.ManagementPolicies {
+// GetManagementPolicies of this OrganizationMetadata.
+func (mg *OrganizationMetadata) GetManagementPolicies() xpv1.ManagementPolicies {
 	return mg.Spec.ManagementPolicies
 }
 
-// GetProviderConfigReference of this OrganisationMetadata.
-func (mg *OrganisationMetadata) GetProviderConfigReference() *xpv1.Reference {
+// GetProviderConfigReference of this OrganizationMetadata.
+func (mg *OrganizationMetadata) GetProviderConfigReference() *xpv1.Reference {
 	return mg.Spec.ProviderConfigReference
 }
 
-// GetPublishConnectionDetailsTo of this OrganisationMetadata.
-func (mg *OrganisationMetadata) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
+// GetPublishConnectionDetailsTo of this OrganizationMetadata.
+func (mg *OrganizationMetadata) GetPublishConnectionDetailsTo() *xpv1.PublishConnectionDetailsTo {
 	return mg.Spec.PublishConnectionDetailsTo
 }
 
-// GetWriteConnectionSecretToReference of this OrganisationMetadata.
-func (mg *OrganisationMetadata) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
+// GetWriteConnectionSecretToReference of this OrganizationMetadata.
+func (mg *OrganizationMetadata) GetWriteConnectionSecretToReference() *xpv1.SecretReference {
 	return mg.Spec.WriteConnectionSecretToReference
 }
 
-// SetConditions of this OrganisationMetadata.
-func (mg *OrganisationMetadata) SetConditions(c ...xpv1.Condition) {
+// SetConditions of this OrganizationMetadata.
+func (mg *OrganizationMetadata) SetConditions(c ...xpv1.Condition) {
 	mg.Status.SetConditions(c...)
 }
 
-// SetDeletionPolicy of this OrganisationMetadata.
-func (mg *OrganisationMetadata) SetDeletionPolicy(r xpv1.DeletionPolicy) {
+// SetDeletionPolicy of this OrganizationMetadata.
+func (mg *OrganizationMetadata) SetDeletionPolicy(r xpv1.DeletionPolicy) {
 	mg.Spec.DeletionPolicy = r
 }
 
-// SetManagementPolicies of this OrganisationMetadata.
-func (mg *OrganisationMetadata) SetManagementPolicies(r xpv1.ManagementPolicies) {
+// SetManagementPolicies of this OrganizationMetadata.
+func (mg *OrganizationMetadata) SetManagementPolicies(r xpv1.ManagementPolicies) {
 	mg.Spec.ManagementPolicies = r
 }
 
-// SetProviderConfigReference of this OrganisationMetadata.
-func (mg *OrganisationMetadata) SetProviderConfigReference(r *xpv1.Reference) {
+// SetProviderConfigReference of this OrganizationMetadata.
+func (mg *OrganizationMetadata) SetProviderConfigReference(r *xpv1.Reference) {
 	mg.Spec.ProviderConfigReference = r
 }
 
-// SetPublishConnectionDetailsTo of this OrganisationMetadata.
-func (mg *OrganisationMetadata) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
+// SetPublishConnectionDetailsTo of this OrganizationMetadata.
+func (mg *OrganizationMetadata) SetPublishConnectionDetailsTo(r *xpv1.PublishConnectionDetailsTo) {
 	mg.Spec.PublishConnectionDetailsTo = r
 }
 
-// SetWriteConnectionSecretToReference of this OrganisationMetadata.
-func (mg *OrganisationMetadata) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
+// SetWriteConnectionSecretToReference of this OrganizationMetadata.
+func (mg *OrganizationMetadata) SetWriteConnectionSecretToReference(r *xpv1.SecretReference) {
 	mg.Spec.WriteConnectionSecretToReference = r
 }
 

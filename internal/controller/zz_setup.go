@@ -55,20 +55,20 @@ import (
 	machinekey "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/machinekey"
 	machineuser "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/machineuser"
 	notificationpolicy "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/notificationpolicy"
-	organisation "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisation"
-	organisationidpazuread "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpazuread"
-	organisationidpgithub "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpgithub"
-	organisationidpgithubes "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpgithubes"
-	organisationidpgitlab "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpgitlab"
-	organisationidpgitlabselfhosted "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpgitlabselfhosted"
-	organisationidpgoogle "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpgoogle"
-	organisationidpjwt "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpjwt"
-	organisationidpldap "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpldap"
-	organisationidpoauth "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpoauth"
-	organisationidpoidc "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpoidc"
-	organisationidpsaml "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationidpsaml"
-	organisationmember "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationmember"
-	organisationmetadata "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organisationmetadata"
+	organization "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organization"
+	organizationidpazuread "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpazuread"
+	organizationidpgithub "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpgithub"
+	organizationidpgithubes "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpgithubes"
+	organizationidpgitlab "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpgitlab"
+	organizationidpgitlabselfhosted "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpgitlabselfhosted"
+	organizationidpgoogle "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpgoogle"
+	organizationidpjwt "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpjwt"
+	organizationidpldap "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpldap"
+	organizationidpoauth "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpoauth"
+	organizationidpoidc "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpoidc"
+	organizationidpsaml "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationidpsaml"
+	organizationmember "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationmember"
+	organizationmetadata "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/organizationmetadata"
 	passwordchangemessagetext "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/passwordchangemessagetext"
 	passwordcomplexitypolicy "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/passwordcomplexitypolicy"
 	passwordlessregistrationmessagetext "github.com/vhdirk/crossplane-provider-zitadel/internal/controller/zitadel/passwordlessregistrationmessagetext"
@@ -140,20 +140,20 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		machinekey.Setup,
 		machineuser.Setup,
 		notificationpolicy.Setup,
-		organisation.Setup,
-		organisationidpazuread.Setup,
-		organisationidpgithub.Setup,
-		organisationidpgithubes.Setup,
-		organisationidpgitlab.Setup,
-		organisationidpgitlabselfhosted.Setup,
-		organisationidpgoogle.Setup,
-		organisationidpjwt.Setup,
-		organisationidpldap.Setup,
-		organisationidpoauth.Setup,
-		organisationidpoidc.Setup,
-		organisationidpsaml.Setup,
-		organisationmember.Setup,
-		organisationmetadata.Setup,
+		organization.Setup,
+		organizationidpazuread.Setup,
+		organizationidpgithub.Setup,
+		organizationidpgithubes.Setup,
+		organizationidpgitlab.Setup,
+		organizationidpgitlabselfhosted.Setup,
+		organizationidpgoogle.Setup,
+		organizationidpjwt.Setup,
+		organizationidpldap.Setup,
+		organizationidpoauth.Setup,
+		organizationidpoidc.Setup,
+		organizationidpsaml.Setup,
+		organizationmember.Setup,
+		organizationmetadata.Setup,
 		passwordchangemessagetext.Setup,
 		passwordcomplexitypolicy.Setup,
 		passwordlessregistrationmessagetext.Setup,

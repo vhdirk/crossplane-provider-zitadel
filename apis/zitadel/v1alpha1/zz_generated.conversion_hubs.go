@@ -142,46 +142,46 @@ func (tr *MachineUser) Hub() {}
 func (tr *NotificationPolicy) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *Organisation) Hub() {}
+func (tr *Organization) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpAzureAd) Hub() {}
+func (tr *OrganizationIdpAzureAd) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpGithub) Hub() {}
+func (tr *OrganizationIdpGithub) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpGithubEs) Hub() {}
+func (tr *OrganizationIdpGithubEs) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpGitlab) Hub() {}
+func (tr *OrganizationIdpGitlab) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpGitlabSelfHosted) Hub() {}
+func (tr *OrganizationIdpGitlabSelfHosted) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpGoogle) Hub() {}
+func (tr *OrganizationIdpGoogle) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpJwt) Hub() {}
+func (tr *OrganizationIdpJwt) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpLdap) Hub() {}
+func (tr *OrganizationIdpLdap) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpOauth) Hub() {}
+func (tr *OrganizationIdpOauth) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpOidc) Hub() {}
+func (tr *OrganizationIdpOidc) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationIdpSaml) Hub() {}
+func (tr *OrganizationIdpSaml) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationMember) Hub() {}
+func (tr *OrganizationMember) Hub() {}
 
 // Hub marks this type as a conversion hub.
-func (tr *OrganisationMetadata) Hub() {}
+func (tr *OrganizationMetadata) Hub() {}
 
 // Hub marks this type as a conversion hub.
 func (tr *PasswordChangeMessageText) Hub() {}

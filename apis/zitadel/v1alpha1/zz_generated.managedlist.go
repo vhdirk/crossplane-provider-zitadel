@@ -412,8 +412,8 @@ func (l *NotificationPolicyList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpAzureAdList.
-func (l *OrganisationIdpAzureAdList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpAzureAdList.
+func (l *OrganizationIdpAzureAdList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -421,8 +421,8 @@ func (l *OrganisationIdpAzureAdList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpGithubEsList.
-func (l *OrganisationIdpGithubEsList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpGithubEsList.
+func (l *OrganizationIdpGithubEsList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -430,8 +430,8 @@ func (l *OrganisationIdpGithubEsList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpGithubList.
-func (l *OrganisationIdpGithubList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpGithubList.
+func (l *OrganizationIdpGithubList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -439,8 +439,8 @@ func (l *OrganisationIdpGithubList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpGitlabList.
-func (l *OrganisationIdpGitlabList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpGitlabList.
+func (l *OrganizationIdpGitlabList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -448,8 +448,8 @@ func (l *OrganisationIdpGitlabList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpGitlabSelfHostedList.
-func (l *OrganisationIdpGitlabSelfHostedList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpGitlabSelfHostedList.
+func (l *OrganizationIdpGitlabSelfHostedList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -457,8 +457,8 @@ func (l *OrganisationIdpGitlabSelfHostedList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpGoogleList.
-func (l *OrganisationIdpGoogleList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpGoogleList.
+func (l *OrganizationIdpGoogleList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -466,8 +466,8 @@ func (l *OrganisationIdpGoogleList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpJwtList.
-func (l *OrganisationIdpJwtList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpJwtList.
+func (l *OrganizationIdpJwtList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -475,8 +475,8 @@ func (l *OrganisationIdpJwtList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpLdapList.
-func (l *OrganisationIdpLdapList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpLdapList.
+func (l *OrganizationIdpLdapList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -484,8 +484,8 @@ func (l *OrganisationIdpLdapList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpOauthList.
-func (l *OrganisationIdpOauthList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpOauthList.
+func (l *OrganizationIdpOauthList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -493,8 +493,8 @@ func (l *OrganisationIdpOauthList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpOidcList.
-func (l *OrganisationIdpOidcList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpOidcList.
+func (l *OrganizationIdpOidcList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -502,8 +502,8 @@ func (l *OrganisationIdpOidcList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationIdpSamlList.
-func (l *OrganisationIdpSamlList) GetItems() []resource.Managed {
+// GetItems of this OrganizationIdpSamlList.
+func (l *OrganizationIdpSamlList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -511,8 +511,8 @@ func (l *OrganisationIdpSamlList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationList.
-func (l *OrganisationList) GetItems() []resource.Managed {
+// GetItems of this OrganizationList.
+func (l *OrganizationList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -520,8 +520,8 @@ func (l *OrganisationList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationMemberList.
-func (l *OrganisationMemberList) GetItems() []resource.Managed {
+// GetItems of this OrganizationMemberList.
+func (l *OrganizationMemberList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]
@@ -529,8 +529,8 @@ func (l *OrganisationMemberList) GetItems() []resource.Managed {
 	return items
 }
 
-// GetItems of this OrganisationMetadataList.
-func (l *OrganisationMetadataList) GetItems() []resource.Managed {
+// GetItems of this OrganizationMetadataList.
+func (l *OrganizationMetadataList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))
 	for i := range l.Items {
 		items[i] = &l.Items[i]

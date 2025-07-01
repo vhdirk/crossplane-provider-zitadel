@@ -17,29 +17,29 @@ type ProjectGrantInitParameters struct {
 
 	// (String) ID of the organization granted the project
 	// ID of the organization granted the project
-	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organisation
+	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organization
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)
 	GrantedOrgID *string `json:"grantedOrgId,omitempty" tf:"granted_org_id,omitempty"`
 
-	// Reference to a Organisation in zitadel to populate grantedOrgId.
+	// Reference to a Organization in zitadel to populate grantedOrgId.
 	// +kubebuilder:validation:Optional
 	GrantedOrgIDRef *v1.Reference `json:"grantedOrgIdRef,omitempty" tf:"-"`
 
-	// Selector for a Organisation in zitadel to populate grantedOrgId.
+	// Selector for a Organization in zitadel to populate grantedOrgId.
 	// +kubebuilder:validation:Optional
 	GrantedOrgIDSelector *v1.Selector `json:"grantedOrgIdSelector,omitempty" tf:"-"`
 
 	// (String) ID of the organization
 	// ID of the organization
-	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organisation
+	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organization
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)
 	OrgID *string `json:"orgId,omitempty" tf:"org_id,omitempty"`
 
-	// Reference to a Organisation in zitadel to populate orgId.
+	// Reference to a Organization in zitadel to populate orgId.
 	// +kubebuilder:validation:Optional
 	OrgIDRef *v1.Reference `json:"orgIdRef,omitempty" tf:"-"`
 
-	// Selector for a Organisation in zitadel to populate orgId.
+	// Selector for a Organization in zitadel to populate orgId.
 	// +kubebuilder:validation:Optional
 	OrgIDSelector *v1.Selector `json:"orgIdSelector,omitempty" tf:"-"`
 
@@ -90,31 +90,31 @@ type ProjectGrantParameters struct {
 
 	// (String) ID of the organization granted the project
 	// ID of the organization granted the project
-	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organisation
+	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organization
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)
 	// +kubebuilder:validation:Optional
 	GrantedOrgID *string `json:"grantedOrgId,omitempty" tf:"granted_org_id,omitempty"`
 
-	// Reference to a Organisation in zitadel to populate grantedOrgId.
+	// Reference to a Organization in zitadel to populate grantedOrgId.
 	// +kubebuilder:validation:Optional
 	GrantedOrgIDRef *v1.Reference `json:"grantedOrgIdRef,omitempty" tf:"-"`
 
-	// Selector for a Organisation in zitadel to populate grantedOrgId.
+	// Selector for a Organization in zitadel to populate grantedOrgId.
 	// +kubebuilder:validation:Optional
 	GrantedOrgIDSelector *v1.Selector `json:"grantedOrgIdSelector,omitempty" tf:"-"`
 
 	// (String) ID of the organization
 	// ID of the organization
-	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organisation
+	// +crossplane:generate:reference:type=github.com/vhdirk/crossplane-provider-zitadel/apis/zitadel/v1alpha1.Organization
 	// +crossplane:generate:reference:extractor=github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)
 	// +kubebuilder:validation:Optional
 	OrgID *string `json:"orgId,omitempty" tf:"org_id,omitempty"`
 
-	// Reference to a Organisation in zitadel to populate orgId.
+	// Reference to a Organization in zitadel to populate orgId.
 	// +kubebuilder:validation:Optional
 	OrgIDRef *v1.Reference `json:"orgIdRef,omitempty" tf:"-"`
 
-	// Selector for a Organisation in zitadel to populate orgId.
+	// Selector for a Organization in zitadel to populate orgId.
 	// +kubebuilder:validation:Optional
 	OrgIDSelector *v1.Selector `json:"orgIdSelector,omitempty" tf:"-"`
 

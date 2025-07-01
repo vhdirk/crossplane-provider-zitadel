@@ -154,7 +154,7 @@ spec:
                       ID of the organization
                     type: string
                   orgIdRef:
-                    description: Reference to a Organisation in zitadel to populate
+                    description: Reference to a Organization in zitadel to populate
                       orgId.
                     properties:
                       name:
@@ -189,7 +189,7 @@ spec:
                     - name
                     type: object
                   orgIdSelector:
-                    description: Selector for a Organisation in zitadel to populate
+                    description: Selector for a Organization in zitadel to populate
                       orgId.
                     properties:
                       matchControllerRef:
@@ -348,7 +348,7 @@ spec:
                       ID of the organization
                     type: string
                   orgIdRef:
-                    description: Reference to a Organisation in zitadel to populate
+                    description: Reference to a Organization in zitadel to populate
                       orgId.
                     properties:
                       name:
@@ -383,7 +383,7 @@ spec:
                     - name
                     type: object
                   orgIdSelector:
-                    description: Selector for a Organisation in zitadel to populate
+                    description: Selector for a Organization in zitadel to populate
                       orgId.
                     properties:
                       matchControllerRef:
