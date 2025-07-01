@@ -19,8 +19,8 @@ func ExtractParamPath(sourceAttr string, isObservation bool) xpref.ExtractValueF
 
 // Reference definitions for resources
 var (
-	// OrganisationRef references an organization by id
-	OrganisationRef = config.Reference{
+	// OrganizationRef references an organization by id
+	OrganizationRef = config.Reference{
 		TerraformName: "zitadel_org",
 		Extractor:     `github.com/crossplane/upjet/pkg/resource.ExtractParamPath("id", true)`,
 	}
@@ -79,21 +79,21 @@ func Configure(p *config.Provider) {
 
 	p.AddResourceConfigurator("zitadel_org", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "Organisation"
+		r.Kind = "Organization"
 	})
 
 	p.AddResourceConfigurator("zitadel_action", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "Action"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_application_api", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "ApplicationApi"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["project_id"] = ProjectRef
 	})
 
@@ -101,7 +101,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "ApplicationKey"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["project_id"] = ProjectRef
 		r.References["app_id"] = ApplicationApiRef
 	})
@@ -110,7 +110,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "ApplicationOidc"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["project_id"] = ProjectRef
 	})
 
@@ -118,7 +118,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "ApplicationSaml"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["project_id"] = ProjectRef
 	})
 
@@ -210,28 +210,28 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "Domain"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_domain_claimed_message_text", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "DomainClaimedMessageText"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_domain_policy", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "DomainPoliy"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_human_user", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "HumanUser"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_idp_azure_ad", func(r *config.Resource) {
@@ -279,7 +279,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "InitMessageText"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_instance_member", func(r *config.Resource) {
@@ -293,35 +293,35 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "LabelPolicy"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_lockout_policy", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "LockoutPolicy"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_login_policy", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "LoginPolicy"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	// p.AddResourceConfigurator("zitadel_login_texts", func(r *config.Resource) {
 	// 	r.ShortGroup = shortGroup
 	// 	r.Kind = "LoginTexts"
 
-	// 	r.References["org_id"] = OrganisationRef
+	// 	r.References["org_id"] = OrganizationRef
 	// })
 
 	p.AddResourceConfigurator("zitadel_machine_key", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "MachineKey"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["user_id"] = MachineUserRef
 	})
 
@@ -329,134 +329,134 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "MachineUser"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_notification_policy", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "NotificationPolicy"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_org_idp_azure_ad", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpAzureAd"
+		r.Kind = "OrganizationIdpAzureAd"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_github", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpGithub"
+		r.Kind = "OrganizationIdpGithub"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_github_es", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpGithubEs"
+		r.Kind = "OrganizationIdpGithubEs"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_gitlab", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpGitlab"
+		r.Kind = "OrganizationIdpGitlab"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_gitlab_self_hosted", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpGitlabSelfHosted"
+		r.Kind = "OrganizationIdpGitlabSelfHosted"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_google", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpGoogle"
+		r.Kind = "OrganizationIdpGoogle"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_jwt", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpJwt"
+		r.Kind = "OrganizationIdpJwt"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_ldap", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpLdap"
+		r.Kind = "OrganizationIdpLdap"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_oauth", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpOauth"
+		r.Kind = "OrganizationIdpOauth"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_oidc", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpOidc"
+		r.Kind = "OrganizationIdpOidc"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_org_idp_saml", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationIdpSaml"
+		r.Kind = "OrganizationIdpSaml"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_org_member", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationMember"
+		r.Kind = "OrganizationMember"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["user_id"] = HumanUserRef
 	})
 
 	p.AddResourceConfigurator("zitadel_org_metadata", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
-		r.Kind = "OrganisationMetadata"
+		r.Kind = "OrganizationMetadata"
 
-		r.References["org_ird"] = OrganisationRef
+		r.References["org_ird"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_password_age_policy", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "PasswordAgePolicy"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_password_change_message_text", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "PasswordChangeMessageText"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_password_complexity_policy", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "PasswordComplexityPolicy"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_password_reset_message_text", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "PasswordResetMessageText"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_passwordless_registration_message_text", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "PasswordlessRegistrationMessageText"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_personal_access_token", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "PersonalAccessToken"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["user_id"] = MachineUserRef
 	})
 
@@ -464,22 +464,22 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "PrivacyPolicy"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_project", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "Project"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_project_grant", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "ProjectGrant"
 
-		r.References["org_id"] = OrganisationRef
-		r.References["granted_org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
+		r.References["granted_org_id"] = OrganizationRef
 		r.References["project_id"] = ProjectRef
 	})
 
@@ -487,7 +487,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "ProjectGrantMember"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["project_id"] = ProjectRef
 		r.References["user_id"] = HumanUserRef
 	})
@@ -496,7 +496,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "ProjectMember"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["project_id"] = ProjectRef
 		r.References["user_id"] = HumanUserRef
 	})
@@ -505,7 +505,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "ProjectRole"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["project_id"] = ProjectRef
 	})
 
@@ -526,14 +526,14 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "TriggerActions"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 	p.AddResourceConfigurator("zitadel_user_grant", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "UserGrant"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["user_id"] = HumanUserRef
 		r.References["project_id"] = ProjectRef
 	})
@@ -542,7 +542,7 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "UserMetadata"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 		r.References["user_id"] = HumanUserRef
 	})
 
@@ -550,25 +550,25 @@ func Configure(p *config.Provider) {
 		r.ShortGroup = shortGroup
 		r.Kind = "VerifyEmailMessageText"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_verify_email_otp_message_text", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "FyEmailOtpMessageText"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_verify_phone_message_text", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "VerifyPhoneMessageText"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 	p.AddResourceConfigurator("zitadel_verify_sms_otp_message_text", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "RifySmsOtpMessageText"
 
-		r.References["org_id"] = OrganisationRef
+		r.References["org_id"] = OrganizationRef
 	})
 
 }
