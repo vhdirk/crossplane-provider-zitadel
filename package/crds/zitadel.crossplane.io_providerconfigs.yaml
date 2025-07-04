@@ -107,8 +107,6 @@ spec:
                 required:
                 - source
                 type: object
-              credentialsKeyName:
-                type: string
               domain:
                 type: string
               insecure:
@@ -117,7 +115,6 @@ spec:
                 type: integer
             required:
             - credentials
-            - credentialsKeyName
             - domain
             - insecure
             - port
