@@ -80,6 +80,12 @@ func Configure(p *config.Provider) {
 	p.AddResourceConfigurator("zitadel_org", func(r *config.Resource) {
 		r.ShortGroup = shortGroup
 		r.Kind = "Organization"
+
+		if s, ok := r.TerraformResource.Schema["primary_domain"]; ok {
+			s.Optional = true
+			s.Computed = false
+		}
+
 	})
 
 	p.AddResourceConfigurator("zitadel_action", func(r *config.Resource) {

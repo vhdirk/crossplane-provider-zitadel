@@ -85,6 +85,11 @@ spec:
                       (String) Name of the org
                       Name of the org
                     type: string
+                  primaryDomain:
+                    description: |-
+                      (String) Primary domain of the org
+                      Primary domain of the org
+                    type: string
                 type: object
               initProvider:
                 description: |-
@@ -108,6 +113,11 @@ spec:
                     description: |-
                       (String) Name of the org
                       Name of the org
+                    type: string
+                  primaryDomain:
+                    description: |-
+                      (String) Primary domain of the org
+                      Primary domain of the org
                     type: string
                 type: object
               managementPolicies:

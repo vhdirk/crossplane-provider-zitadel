@@ -22,6 +22,10 @@ type OrganizationInitParameters struct {
 	// (String) Name of the org
 	// Name of the org
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
+
+	// (String) Primary domain of the org
+	// Primary domain of the org
+	PrimaryDomain *string `json:"primaryDomain,omitempty" tf:"primary_domain,omitempty"`
 }
 
 type OrganizationObservation struct {
@@ -57,6 +61,11 @@ type OrganizationParameters struct {
 	// Name of the org
 	// +kubebuilder:validation:Optional
 	Name *string `json:"name,omitempty" tf:"name,omitempty"`
+
+	// (String) Primary domain of the org
+	// Primary domain of the org
+	// +kubebuilder:validation:Optional
+	PrimaryDomain *string `json:"primaryDomain,omitempty" tf:"primary_domain,omitempty"`
 }
 
 // OrganizationSpec defines the desired state of Organization
