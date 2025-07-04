@@ -107,8 +107,20 @@ spec:
                 required:
                 - source
                 type: object
+              credentialsKeyName:
+                type: string
+              domain:
+                type: string
+              insecure:
+                type: boolean
+              port:
+                type: integer
             required:
             - credentials
+            - credentialsKeyName
+            - domain
+            - insecure
+            - port
             type: object
           status:
             description: A ProviderConfigStatus reflects the observed state of a ProviderConfig.

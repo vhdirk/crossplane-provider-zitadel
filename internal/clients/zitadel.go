@@ -7,6 +7,7 @@ package clients
 import (
 	"context"
 	"encoding/json"
+	"strconv"
 
 	xpv1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
@@ -28,18 +29,6 @@ const (
 	errExtractSecretKey     = "cannot extract from secret key when none specified"
 	errGetCredentialsSecret = "cannot get credentials secret"
 )
-
-var requiredZitadelConfigKeys = []string{
-	"domain",
-}
-var optionalZitadelConfigKeys = []string{
-	"insecure",
-	"jwt_file",
-	"jwt_profile_file",
-	"jwt_profile_json",
-	"port",
-	"token",
-}
 
 // TerraformSetupBuilder builds Terraform a terraform.SetupFn function which
 // returns Terraform provider setup configuration
@@ -67,29 +56,24 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 			return ps, errors.Wrap(err, errTrackUsage)
 		}
 
+		// set provider configuration
+		ps.Configuration = map[string]any{}
+
+		ps.Configuration["domain"] = pc.Spec.Domain
+		ps.Configuration["port"] = strconv.FormatUint(uint64(pc.Spec.Port), 10)
+		ps.Configuration["insecure"] = strconv.FormatBool(pc.Spec.Insecure)
+
 		creds, err := ExtractCredentials(ctx, pc.Spec.Credentials.Source, client, pc.Spec.Credentials.CommonCredentialSelectors)
 		if err != nil {
 			return ps, errors.Wrap(err, errExtractCredentials)
 		}
 
-		// set provider configuration
-		ps.Configuration = map[string]any{}
-		// Iterate over the requiredZitadelConfigKeys, they must be set
-		for _, key := range requiredZitadelConfigKeys {
-			if value, ok := creds[key]; ok {
-				if !ok {
-					// Return an error if a required key is missing
-					return ps, errors.Errorf("required zitadel configuration key '%s' is missing", key)
-				}
-				ps.Configuration[key] = value
+		if value, ok := creds[pc.Spec.CredentialsKeyName]; ok {
+			if !ok {
+				// Return an error if a required key is missing
+				return ps, errors.Errorf("required zitadel configuration key '%s' is missing", pc.Spec.CredentialsKeyName)
 			}
-		}
-
-		// Iterate over the optionalZitadelConfigKeys, they can be set and do not have to be in the creds map
-		for _, key := range optionalZitadelConfigKeys {
-			if value, ok := creds[key]; ok {
-				ps.Configuration[key] = value
-			}
+			ps.Configuration["jwt_profile_json"] = value
 		}
 
 		return ps, nil
