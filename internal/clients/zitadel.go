@@ -68,13 +68,12 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 			return ps, errors.Wrap(err, errExtractCredentials)
 		}
 
-		if value, ok := creds[pc.Spec.CredentialsKeyName]; ok {
-			if !ok {
-				// Return an error if a required key is missing
-				return ps, errors.Errorf("required zitadel configuration key '%s' is missing", pc.Spec.CredentialsKeyName)
-			}
-			ps.Configuration["jwt_profile_json"] = value
+		// bit weird to convert back to json, but I'm lazy
+		jsoncreds, err := json.Marshal(creds)
+		if err != nil {
+			return ps, errors.Wrap(err, errExtractCredentials)
 		}
+		ps.Configuration["jwt_profile_json"] = string(jsoncreds)
 
 		return ps, nil
 	}

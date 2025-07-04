@@ -12,10 +12,9 @@ import (
 
 // A ProviderConfigSpec defines the desired state of a ProviderConfig.
 type ProviderConfigSpec struct {
-	Domain             string `json:"domain"`
-	Port               uint16 `json:"port"`
-	Insecure           bool   `json:"insecure"`
-	CredentialsKeyName string `json:"credentialsKeyName"`
+	Domain   string `json:"domain"`
+	Port     uint16 `json:"port"`
+	Insecure bool   `json:"insecure"`
 
 	// Credentials required to authenticate to this provider.
 	Credentials ProviderCredentials `json:"credentials"`
